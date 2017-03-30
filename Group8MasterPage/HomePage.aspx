@@ -2,45 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <div class="title_homepage">Featured Books</div>
-            <div class="featured_books">
-               <div class="Featured1">
-                    <div class="feateured_pic">
-                        <asp:Image ID="Image1" runat="server"/>
+   <asp:Repeater ID="Repeater1" runat="server" EnableViewState="false" OnItemCommand="Repeater1_ItemCommand">
+       <ItemTemplate>
+           <div style="border:2px #808080; padding:10px; margin:10px;">
+               <div class="picture col-md-4">
+                   <asp:Image ID="imgPicture" runat="server" ImageUrl='<%# Eval("Picture") %>' />
+               </div>
+                <div class="col-md-8">
+                <asp:Label ID="lblTitle" runat="server" Text='<%# Eval("Title_of_Book") %>' />
+                <asp:Label ID="lblIsbn" runat="server" Text='<%# Eval("ISBN") %>' />
+                <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("Description") %>' />               
+                <asp:LinkButton ID="LinkEmail" runat="server" Text="More Info" CommandArgument='<%# Eval("BookID") %>'></asp:LinkButton>
+
                     </div>
-                    <div class="featured_desc">
-                        <asp:Label ID="TitleBook1" CssClass="featuredBookTitle" runat="server" Text="Label"></asp:Label>
-                         <br />
-                        <asp:Label ID="DescBook1" CssClass="featuredBookDesc" runat="server"></asp:Label>
-                         <br />
-                        <asp:Button ID="MoreInfo1" runat="server" Text="More Info" OnClick="MoreInfo1_Click" />
-                    </div>
-                </div>
-                <div class="Featured2">
-                    <div class="feateured_pic">
-                        <asp:Image ID="Image2" runat="server" />
-                    </div>
-                    <div class="featured_desc">
-                        <asp:Label ID="TitleBook2" CssClass="featuredBookTitle" runat="server" Text="Label"></asp:Label>
-                         <br />
-                        <asp:Label ID="DescBook2" CssClass="featuredBookDesc" runat="server"></asp:Label>
-                        <br />
-                        <asp:Button ID="MoreInfo2" runat="server" Text="More Info" OnClick="MoreInfo1_Click" />
-                    </div>
-                </div>
-                <div class="Featured3">
-                   <div class="feateured_pic">
-                        <asp:Image ID="Image3" runat="server" />
-                    </div>
-                    <div class="featured_desc">
-                        <asp:Label ID="TitleBook3" CssClass="featuredBookTitle" runat="server" Text="Label"></asp:Label>
-                         <br />
-                        <asp:Label ID="DescBook3" CssClass="featuredBookDesc" runat="server"></asp:Label>
-                        <br />
-                        <asp:Button ID="MoreInfo3" runat="server" Text="More Info" OnClick="MoreInfo1_Click" />
-                    </div>
-                </div>
-        </div>
-    </div>
+           </div>
+       </ItemTemplate>
+       <SeparatorTemplate>
+           <hr />
+       </SeparatorTemplate>
+       </asp:Repeater>
 </asp:Content>
