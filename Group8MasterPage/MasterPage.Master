@@ -7,6 +7,9 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
     <form id="form1" runat="server">
