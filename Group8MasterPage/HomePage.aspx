@@ -12,7 +12,7 @@
                 <asp:Label ID="lblTitle" runat="server" Text='<%# Eval("Title_of_Book") %>' />
                 <asp:Label ID="lblIsbn" runat="server" Text='<%# Eval("ISBN") %>' />
                 <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("Description") %>' />               
-                <asp:LinkButton ID="LinkEmail" runat="server" Text="More Info" CommandArgument='<%# Eval("BookID") %>'></asp:LinkButton>
+                <asp:LinkButton ID="btnMoreInfo" runat="server" Text="More Info" CommandArgument='<%# Eval("BookID") %>'></asp:LinkButton>
 
                     </div>
            </div>
