@@ -2,27 +2,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="BookDetails">
+    <div class="BookDetails" style="border:2px #808080; padding:10px; margin:10px;">
                     <div class="detail_pic">
                         <asp:Image ID="Image1" runat="server"/>
                     </div>
                     <div class="featured_desc">
-                        <asp:Label ID="TitleBook" CssClass="featuredBookTitle" runat="server" Text="Label"></asp:Label>
+                        Title:<asp:Label ID="TitleBook" CssClass="featuredBookTitle" runat="server" Text="Label"></asp:Label>
                          <br />
                     <div class="book_details" >
-                        <asp:Label ID="DescBook" CssClass="featuredBookDesc" runat="server"></asp:Label>
+                        Description:<asp:Label ID="DescBook" CssClass="featuredBookDesc" runat="server"></asp:Label>
                         <br />
-                        <asp:Label ID="Isbn" runat="server"></asp:Label>
+                        Isbn:<asp:Label ID="Isbn" runat="server"></asp:Label>
                          <br />
-                        <asp:Label ID="Author" runat="server"></asp:Label>
+                        Author:<asp:Label ID="Author" runat="server"></asp:Label>
                          <br />
-                        <asp:Label ID="BookVersion" runat="server"></asp:Label> 
+                        Version:<asp:Label ID="BookVersion" runat="server"></asp:Label> 
                          <br />     
-                        <asp:Label ID="Condition" runat="server"></asp:Label>
+                        Condition:<asp:Label ID="Condition" runat="server"></asp:Label>
                          <br />
-                        <asp:Label ID="Price" CssClass="featuredBookDesc" runat="server"></asp:Label>
+                        Price<asp:Label ID="Price" CssClass="featuredBookDesc" runat="server"></asp:Label>
                          <br />
-                        <asp:Button ID="BuyBtn" runat="server" Text="Buy" />
+                        <asp:Button ID="BuyBtn" runat="server" Text="Buy" OnClick="BuyBtn_Click" />
                      </div>
                     </div>
                 </div>
