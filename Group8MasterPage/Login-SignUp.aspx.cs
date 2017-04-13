@@ -60,8 +60,8 @@ namespace Group8MasterPage
 
         protected void sgnupbtn_Click(object sender, EventArgs e)
         {
-            username = UsernameTxt.Text;
-            password = PasswordTxt.Text;
+            Session["Username"] = UsernameTxt.Text;
+            Session["Password"] = PasswordTxt.Text;
 
             Response.Redirect("SignUp-Page.aspx");
         }
