@@ -64,8 +64,7 @@ namespace Group8MasterPage
         }
 
         protected void BuyBtn_Click(object sender, EventArgs e)
-        {
-            
+        {          
             cartList.Add(new CartItem(title2, isbn2, price2));
             Session["CartSession"] = cartList;           
             Response.Redirect("ShoppingCart.aspx");

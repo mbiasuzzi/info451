@@ -13,20 +13,29 @@ namespace Group8MasterPage
         ArrayList CartItems; 
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                CartItems = (ArrayList)Session["CartSession"];
-                ShoppingCartGrid.DataSource = CartItems;
-                ShoppingCartGrid.DataBind();
-            }
-            else
-            {
-               
-                ShoppingCartGrid.DataSource = CartItems;
-                ShoppingCartGrid.DataBind();
-            }
-                
+        {    
+            CartItems = (ArrayList)Session["CartSession"];
+            ShoppingCartGrid.DataSource = CartItems;
+            ShoppingCartGrid.DataBind();
+            CalculateTotal();         
         }
+        public void CalculateTotal()
+        {
+            double sum = 0;
+            for (int i = 0; i<ShoppingCartGrid.Rows.Count; ++i)
+            {
+                sum += Convert.ToDouble(ShoppingCartGrid.Rows[i].Cells[3].Text);
+            }
+                numberTotal.Text = sum.ToString();
+            
+        }
+
+        protected void ShoppingCartGrid_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int selectedR = e.RowIndex;
+            CartItems.RemoveAt(selectedR);
+            ShoppingCartGrid.DataBind();
+        }
+
     }
 }
