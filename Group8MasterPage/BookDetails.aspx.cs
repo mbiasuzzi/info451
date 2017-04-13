@@ -16,6 +16,8 @@ namespace Group8MasterPage
         public string title2;
         public string isbn2;
         public string price2;
+        public string bookID2;
+        public string userID2;
         public static ArrayList cartList = new ArrayList();
         private string _connectionString = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
@@ -57,6 +59,9 @@ namespace Group8MasterPage
                     Condition.Text = (string)reader["Condition"];
                     Price.Text = Convert.ToString(reader["Price"]);
                     price2 = Price.Text;
+                    bookID2 = Convert.ToString(reader["BookID"]);
+                    userID2 = Convert.ToString(reader["UserID"]);
+
 
                 }
             }
@@ -65,7 +70,7 @@ namespace Group8MasterPage
 
         protected void BuyBtn_Click(object sender, EventArgs e)
         {          
-            cartList.Add(new CartItem(title2, isbn2, price2));
+            cartList.Add(new CartItem(title2, isbn2, price2, bookID2, userID2));
             Session["CartSession"] = cartList;           
             Response.Redirect("ShoppingCart.aspx");
         }
