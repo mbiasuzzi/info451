@@ -33,6 +33,11 @@ namespace Group8MasterPage
                     con.Open();
                     cmd.ExecuteScalar();
                     con.Close();
+
+                    Session["Username"] = Username.Text;
+                    Session["Email"] = Email.Text;
+
+                    Response.Redirect("HomePage-LoggedIn.aspx");
                 }
             }
         }

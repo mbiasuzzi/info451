@@ -5,7 +5,7 @@
     <asp:TextBox ID="Username" runat="server">Username</asp:TextBox>
     <br />
     <br />
-    <asp:TextBox ID="Password" runat="server">Password</asp:TextBox>
+    <asp:TextBox ID="Password" runat="server" BorderColor="Black" ForeColor="Black">Password</asp:TextBox>
     <br />
     <br />
     <asp:TextBox ID="Email" runat="server">Email </asp:TextBox>

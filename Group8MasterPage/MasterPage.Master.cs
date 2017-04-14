@@ -11,7 +11,15 @@ namespace Group8MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] != null)
+            {
+                hmbtn.Text = (string)Session["Username"];
+            }
+        }
 
+        protected void hmbtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login-SignUp.aspx");
         }
     }
 }

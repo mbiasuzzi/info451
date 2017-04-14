@@ -12,24 +12,6 @@ namespace Group8MasterPage
 {
     public partial class Login_SignUp : System.Web.UI.Page
     {
-        private string username;
-        private string password;
-
-        public string Username 
-        {
-           get
-            {
-                return username;
-            } 
-        }
-
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -51,7 +33,18 @@ namespace Group8MasterPage
 
                     if (result > 0)
                     {
+                        using (var cmd2 = new SqlCommand("Select Email From UserInformation Where UserID = @username", con))
+                        {
+                            cmd2.Parameters.AddWithValue("@username", UsernameTxt.Text);
+                            con.Open();
 
+                            var email = (string)cmd2.ExecuteScalar();
+
+                            Session["Email"] = email;
+                        }
+
+                        Session["Username"] = UsernameTxt.Text;
+                        Response.Redirect("HomePage-LoggedIn.aspx");
                     }
 
                 }
