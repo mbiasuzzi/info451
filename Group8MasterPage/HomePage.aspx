@@ -5,10 +5,10 @@
    <asp:Repeater ID="Repeater1" runat="server" EnableViewState="false" OnItemCommand="Repeater1_ItemCommand">
        <ItemTemplate>
            <div style="border:2px #808080; padding:10px; margin:10px;">
-               <div class="picture push-xl9">
+               <div class="picture col-md-3">
                    <asp:Image ID="imgPicture" runat="server" ImageUrl='<%# Eval("Picture") %>' />
                </div>
-                <div class="col-xs-9">
+                <div class="col-md-9">
                 <asp:Label ID="lblTitle" runat="server" Text='<%# Eval("Title_of_Book") %>' />
                     <br />
                     <p>ISBN:

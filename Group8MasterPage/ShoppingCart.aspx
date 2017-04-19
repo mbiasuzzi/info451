@@ -8,16 +8,12 @@
         <asp:Label ID="lblTotal" runat="server" Text="Total"></asp:Label>
         <asp:Label ID="numberTotal" runat="server" Text=""></asp:Label>
         <br />
-        <asp:Button ID="btnPurchase" runat="server" Text="Purchase" OnClientClick="javascript:Popup()" OnClick="btnPurchase_Click" />
+        <asp:Label ID="lblNewEmail"  runat="server" Text="To complete your purchase please enter an email or log in."></asp:Label>
+        <asp:TextBox ID="txtNewEmail"  runat="server"></asp:TextBox>
+        <asp:Button ID="btnNewEmail"  runat="server" Text="Submit" OnClick="btnNewEmail_Click" />
+        <asp:Button class="btn-lg" ID="btnPurchase" runat="server" Text="Purchase" OnClick ="btnPurchase_Click" />
     </div>
-    <script language="javascript">
-
-        function Popup()
-        {
-            window.prompt("Enter you email or log in", "defaultText");
-
-        }
-
-</script>
+    
+    
 </asp:Content>
     

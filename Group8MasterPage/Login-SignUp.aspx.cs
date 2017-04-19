@@ -36,7 +36,7 @@ namespace Group8MasterPage
                         using (var cmd2 = new SqlCommand("Select Email From UserInformation Where UserID = @username", con))
                         {
                             cmd2.Parameters.AddWithValue("@username", UsernameTxt.Text);
-                            con.Open();
+                            
 
                             var email = (string)cmd2.ExecuteScalar();
 
