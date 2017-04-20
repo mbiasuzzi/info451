@@ -13,5 +13,30 @@ namespace Group8MasterPage
         {
 
         }
+
+        protected void Addbtn_Click(object sender, EventArgs e)
+        {
+            if (Session["Username"] == null)
+            {
+                Response.Redirect("Error-Page.aspx");
+            }
+            else
+            {
+                Response.Redirect("Add-Listing.aspx");
+            }
+        }
+
+        protected void Delbtn_Click(object sender, EventArgs e)
+        {
+            if (Session["Username"] == null)
+            {
+                Response.Redirect("Error-Page.aspx");
+            }
+            else
+            {
+                Response.Redirect("Delete-Listing.aspx");
+            }
+        }
+
     }
 }

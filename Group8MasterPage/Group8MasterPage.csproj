@@ -99,6 +99,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Add-Listing.aspx" />
     <Content Include="BookDetails.aspx" />
     <Content Include="Books.aspx" />
     <Content Include="bootstrap-theme.css" />
@@ -107,6 +108,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Delete-Listing.aspx" />
+    <Content Include="Error-Page.aspx" />
     <Content Include="HomePage-LoggedIn.aspx" />
     <Content Include="Login-SignUp.aspx" />
     <Content Include="materialize.css" />
@@ -143,6 +146,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add-Listing.aspx.cs">
+      <DependentUpon>Add-Listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Add-Listing.aspx.designer.cs">
+      <DependentUpon>Add-Listing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BookDetails.aspx.cs">
       <DependentUpon>BookDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +175,20 @@
       <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="CartItem.cs" />
+    <Compile Include="Delete-Listing.aspx.cs">
+      <DependentUpon>Delete-Listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Delete-Listing.aspx.designer.cs">
+      <DependentUpon>Delete-Listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error-Page.aspx.cs">
+      <DependentUpon>Error-Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error-Page.aspx.designer.cs">
+      <DependentUpon>Error-Page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage-LoggedIn.aspx.cs">
       <DependentUpon>HomePage-LoggedIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
