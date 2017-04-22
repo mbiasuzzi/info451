@@ -6,7 +6,6 @@
 
 #Menu1 ul li {
     padding-right:20px;
-
 }
 
 body {
@@ -22,4 +21,5 @@ input#hmbtn {
 
 div#Header{
     background-color:whitesmoke;
+    margin-bottom:30px;
 }
