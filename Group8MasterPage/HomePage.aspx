@@ -4,11 +4,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <asp:Repeater ID="Repeater1" runat="server" EnableViewState="false" OnItemCommand="Repeater1_ItemCommand">
        <ItemTemplate>
-           <div style="border:2px #808080; padding:10px; margin:10px;">
-               <div class="picture col-md-3">
-                   <asp:Image ID="imgPicture" runat="server" ImageUrl='<%# Eval("Picture") %>' />
+           <div class="row">
+           <div class="col-md-12" style="border:2px #808080; padding:10px; margin:10px;">
+               <div class="picture col-md-2">
+                   <asp:Image class="img-responsive imgsize" ID="imgPicture" runat="server" ImageUrl='<%# Eval("Picture") %>' />
                </div>
-                <div class="col-md-9">
+                <div class="col-md-10">
                 <asp:Label ID="lblTitle" runat="server" Text='<%# Eval("Title_of_Book") %>' />
                     <br />
                     <p>ISBN:
@@ -20,6 +21,7 @@
 
                     </div>
            </div>
+          </div>
        </ItemTemplate>
        <SeparatorTemplate>
            <hr />

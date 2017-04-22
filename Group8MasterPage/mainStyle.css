@@ -1,0 +1,25 @@
+﻿div#Menu1 {
+
+    padding-top:20px;
+    padding-left:20px;
+}
+
+#Menu1 ul li {
+    padding-right:20px;
+
+}
+
+body {
+    font-family: 'Lato';
+    font-size:16px;
+}
+
+input#hmbtn {
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+div#Header{
+    background-color:whitesmoke;
+}

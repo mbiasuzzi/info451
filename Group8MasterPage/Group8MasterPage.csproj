@@ -109,6 +109,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="HomePage-LoggedIn.aspx" />
     <Content Include="Login-SignUp.aspx" />
+    <Content Include="mainStyle.css" />
     <Content Include="materialize.css" />
     <Content Include="materialize.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

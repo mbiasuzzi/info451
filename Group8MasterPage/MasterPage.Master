@@ -8,7 +8,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-    <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
     <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="bootsrap-thems.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <!-- Latest compiled and minified CSS -->
@@ -19,22 +19,21 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="mainStyle.css" type="text/css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <div id="Header">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="hmbtn" runat="server" Text="Login" OnClick="hmbtn_Click" />
-         <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+    <div class="container">
+        <div class="row" id="Header">
+         <asp:Menu  ID="Menu1" runat="server" Orientation="Horizontal">
                 <Items>
                     <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Books" Value="Books" NavigateUrl="~/Books.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="My Profile" Value="My Profile" NavigateUrl="~/MyProfile.aspx">
-                        <asp:MenuItem Text="Cart" Value="Cart" NavigateUrl="~/Cart.aspx"></asp:MenuItem>
-                    </asp:MenuItem>
+                    <asp:MenuItem Text="My Profile" Value="My Profile" NavigateUrl="~/MyProfile.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Cart" Value="Cart" NavigateUrl="~/ShoppingCart.aspx"></asp:MenuItem>
                 </Items>
             </asp:Menu>
+                 <asp:Button ID="hmbtn" runat="server" Text="Login" OnClick="hmbtn_Click" CssClass="btn-lg" />
         </div>
         <div id="Main Content">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
