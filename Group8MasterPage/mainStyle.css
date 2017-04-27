@@ -23,3 +23,22 @@ div#Header{
     background-color:whitesmoke;
     margin-bottom:30px;
 }
+
+div#Footer{
+    background-color:whitesmoke;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+td {
+    padding-right: 20px;
+}
+
+tbody {
+    border:none;
+        border-color:white;
+}
+shoppingcart {
+    border:none;
+        border-color:white;
+}
