@@ -10,11 +10,11 @@
                    <asp:Image class="img-responsive imgsize" ID="imgPicture" runat="server" ImageUrl='<%# Eval("Picture") %>' />
                </div>
                 <div class="col-md-10">
-                <asp:Label ID="lblTitle" runat="server" Text='<%# Eval("Title_of_Book") %>' />
+                <div class="lblDetail"><asp:Label ID="lblTitle" runat="server" Text='<%# Eval("Title_of_Book") %>' /></div>
                     <br />
-                    <p>ISBN:
+                    <div class="lblDetail">ISBN: </div>
                 <asp:Label ID="lblIsbn" runat="server" Text='<%# Eval("ISBN") %>' /></p>
-                    <p>Description:</p>
+                    <div class="lblDetail"> Description: </div>
                 <asp:Label ID="lblDescription" runat="server" Text='<%# Eval("Description") %>' /> 
                     <br />              
                 <asp:LinkButton ID="btnMoreInfo" runat="server" Text="More Info" CommandArgument='<%# Eval("BookID") %>'></asp:LinkButton>
