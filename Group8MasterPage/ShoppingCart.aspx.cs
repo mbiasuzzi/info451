@@ -137,8 +137,9 @@ namespace Group8MasterPage
                     con2.Open();
                     cmd2.ExecuteNonQuery();
                 }
-               // SendEmail();
-                
+                // SendEmail();
+
+                Response.Redirect("PaymentInfo-Page.aspx");            
     }
         }
         public void SendEmail()

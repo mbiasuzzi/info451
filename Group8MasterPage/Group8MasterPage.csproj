@@ -129,6 +129,8 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Payment-Success.aspx" />
+    <Content Include="PaymentInfo-Page.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -224,6 +226,20 @@
     </Compile>
     <Compile Include="MyProfile.aspx.designer.cs">
       <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment-Success.aspx.cs">
+      <DependentUpon>Payment-Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment-Success.aspx.designer.cs">
+      <DependentUpon>Payment-Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentInfo-Page.aspx.cs">
+      <DependentUpon>PaymentInfo-Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentInfo-Page.aspx.designer.cs">
+      <DependentUpon>PaymentInfo-Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShoppingCart.aspx.cs">
